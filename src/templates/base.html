@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Isaias Alvarez">
+    <meta name="description" content="Wiki with information of various characters from the Simpsons series">
+    <title>Simpsons</title>
+</head>
+<body>
+    <header>
+        <span>
+            <a href="{% url 'index' %}">
+                <img src="{% static 'imgs/donut.png' %}" alt="donut" height="50" width="50">
+                Simpsons
+            </a>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'characters:character_list' %}">Characters</a>
+        </span>
+    </header>
+    
+    <main>
+
+        {% block body %}{% endblock %}
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <h2>Update Character</h2>
+    <p>You are seeing the information of {{ character.name }} </p>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a href="{% url 'characters:character_detail' slug=character.slug %}">Cancel</a>
+        <input type="submit" value="Save">
+    </form>
+
+{% endblock %}

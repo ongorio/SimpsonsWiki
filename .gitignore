@@ -1,0 +1,7 @@
+src/db.sqlite3
+src/simpsons/config.json
+src/media/*
+src/characters/migrations/*
+
+!src/media/media.txt
+!src/characters/migrations/__init__.py

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <h2>Add Character</h2>
+    <p>Use this form to add a new character to the wiki!</p>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a href="{% url 'characters:character_list' %}">Cancel</a>
+        <input type="submit" value="Add">
+    </form>
+
+{% endblock %}

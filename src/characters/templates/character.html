@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <h2>{{ character.name }}</h2>
+    
+    <img src="{{ character.image.url }}" alt="" height="125" width="90"><br>
+
+    <span>
+        <a href="{% url 'characters:character_update' slug=character.slug %}">Edit</a>
+        <a href="{% url 'characters:character_delete' slug=character.slug %}">Delete</a>
+    </span>
+
+    <div>
+        <h3>Details</h3 >
+        
+        <Strong>Full Name:</Strong> {{ character.full_name }}<br>
+        <Strong>Nationality:</Strong> {{ character.nationality }} <br>
+        <Strong>Occupation:</Strong> {{ character.occupation }} <br>
+        <Strong>First Appearance:</Strong> {{ character.first_appearance }} <br>
+        <Strong>Release Year:</Strong> {{ character.release_year }} <br>
+        <Strong>Description:</Strong> {{ character.first_year }} <br>
+    </div>
+
+{% endblock %}

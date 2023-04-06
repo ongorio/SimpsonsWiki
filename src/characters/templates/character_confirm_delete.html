@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h2>Delete the following character: <a href="{% url 'characters:character_detail' slug=character.slug %}">{{ character.name }}</a></h2>
+    <p>This will eliminate all information related to the character and you will not be able to restore it!</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <a href="{% url 'characters:character_detail' slug=character.slug %}">Cancel</a>
+        <input type="submit" value="Delete">
+    </form>
+
+
+{% endblock %}

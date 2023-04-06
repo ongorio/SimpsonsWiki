@@ -1,0 +1,4 @@
+{
+    "SECRET_KEY": "Secret Key goes here",
+    "DEBUG": true
+}
